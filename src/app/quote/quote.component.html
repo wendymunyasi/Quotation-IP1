@@ -9,11 +9,11 @@
       <button (click)='toggleDetails(i)'>Show Author</button>
       <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote'></app-quote-detail>
       <button (click)='toggleDetailsTwo(i)'>Show Submitter</button>
-      <app-quote-detailsubmitter *ngIf='quote.showSubmitter'[quote]='quote'></app-quote-detailsubmitter>
+      <app-quote-detailsubmitter *ngIf='quote.showSubmitter' [quote]='quote'></app-quote-detailsubmitter>
+      <app-date-counter [quote]='quote'></app-date-counter>
       <hr>
     </div>
   </ul>
 
-  
-</div>
 
+</div>
