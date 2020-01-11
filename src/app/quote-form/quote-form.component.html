@@ -5,7 +5,10 @@
     <div class="form-group">
 
       <label for="name">Quote:</label>
-      <textarea class="form-control" id="name" rows="4" required></textarea>
+      <textarea class="form-control" id="name" rows="4" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required></textarea>
+      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+        <p>Quote is required</p>
+      </div>
 
       <!-- {{newQuote.name}} -->
 
@@ -13,20 +16,34 @@
     <div class="form-group">
 
       <label for="author">Author:</label>
-      <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" author="author">
-
+      <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" author="author"
+        #author="ngModel" required>
+      <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+        <p>Author is required</p>
+      </div>
 
     </div>
     <div class="form-group">
+
       <label for="submitter">Submitter:</label>
-      <input type="text" required class ="form-control" id="submitter" [(ngModel)]="newQuote.submitter" submitter="submitter">
+      <input type="text" class="form-control" id="submitter" [(ngModel)]="newQuote.submitter" submitter="submitter"
+        #submitter="ngModel" required>
+      <div [hidden]="submitter.valid || submitter.pristine" class="alert alert-danger">
+        <p>Submitter is required</p>
+      </div>
 
     </div>
+
     <div class="form-group">
+
       <label for="createdDate">Created Date:</label>
-      <input type='date' id="created" required>
+      <input type='date' id="created" [(ngModel)]="newQuote.createdDate" name="createdDate" #createdDate="ngModel"required>
+      <div [hidden]="createdDate.valid || createdDate.pristine" class="alert alert-danger">
+        <p>Date is required</p>
+      </div>
 
     </div>
+
     <button type="submit" class="btn btn-success">Add Quote</button>
   </form>
 </div>
