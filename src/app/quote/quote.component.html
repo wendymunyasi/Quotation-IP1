@@ -1,9 +1,11 @@
 <div>
   <h1>My Favorite Quotes</h1>
+  <hr>
   <ul>
-    <li *ngFor='let quote of quotes'>
-      {{quote.name}}
+    <div *ngFor='let quote of quotes; let i = index'>
+      <li> {{quote.name}}</li><br>
+      <button (click)='toggleDetails(i)'>Toggle Details</button>
       <app-quote-detail [quote]='quote'></app-quote-detail>
-    </li>
+    </div>
   </ul>
 </div>
