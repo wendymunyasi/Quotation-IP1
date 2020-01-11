@@ -3,6 +3,6 @@
 export class Quote {
   id: number;
   name: string;
-  Author: string;
-  Submitter: string;
+  author: string;
+  submitter: string;
 }
