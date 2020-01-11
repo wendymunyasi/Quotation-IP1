@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Quote } from '../quote'
 
 @Component({
   selector: 'app-date-counter',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./date-counter.component.css']
 })
 export class DateCounterComponent implements OnInit {
+
+  @Input() quote: Quote;
 
   constructor() { }
 
