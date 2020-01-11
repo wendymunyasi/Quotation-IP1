@@ -3,7 +3,7 @@
   <ul>
     <div *ngFor='let quote of quotes; let i = index'>
       <li>
-        {{quote.name}} Created on {{quote.completeDate|date}}.
+        {{quote.name}} Created on {{quote.createdDate|date}}.
       </li>
       <br>
       <button (click)='toggleDetails(i)'>Show Author</button>

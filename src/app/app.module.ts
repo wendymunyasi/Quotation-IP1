@@ -7,6 +7,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { QuoteDetailsubmitterComponent } from './quote-detailsubmitter/quote-detailsubmitter.component';
 import { DateCounterComponent } from './date-counter/date-counter.component';
+import { DateCountPipe } from './date-count.pipe';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { DateCounterComponent } from './date-counter/date-counter.component';
     QuoteDetailComponent,
     QuoteDetailsubmitterComponent,
     DateCounterComponent,
+    DateCountPipe,
   ],
   imports: [
     BrowserModule,
