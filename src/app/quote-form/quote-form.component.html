@@ -1,11 +1,13 @@
 <div class="container-fluid">
   <h2 class="text-center">Create a new Quote</h2>
   <hr>
+  <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'></form>
   <form #quoteForm='ngForm'>
     <div class="form-group">
 
       <label for="name">Quote:</label>
-      <textarea class="form-control" id="name" rows="4" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required></textarea>
+      <textarea class="form-control" id="name" rows="4" [(ngModel)]="newQuote.name" name="name" #name="ngModel"
+        required></textarea>
       <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
         <p>Quote is required</p>
       </div>
@@ -37,7 +39,8 @@
     <div class="form-group">
 
       <label for="createdDate">Created Date:</label>
-      <input type='date' id="created" [(ngModel)]="newQuote.createdDate" name="createdDate" #createdDate="ngModel"required>
+      <input type='date' id="created" [(ngModel)]="newQuote.createdDate" name="createdDate" #createdDate="ngModel"
+        required>
       <div [hidden]="createdDate.valid || createdDate.pristine" class="alert alert-danger">
         <p>Date is required</p>
       </div>
