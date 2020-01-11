@@ -11,7 +11,7 @@ export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
     new Quote(1, 'You only live once.', 'Mae West', 'Sarah Matamoros'),
     new Quote(2, 'You cannot afford it unless you can buy it twice.', 'Jay Z', 'Wendy Dev'), //Jay Z
-    new Quote(3, 'You Want A Love That Consumes You. You Want Passion And Adventure And Even A Little Danger.', 'Damon Salvatore', 'Elijah Gilles'), //Damon Salvatore
+    new Quote(3, 'You want a love that consumes you. You want passion and adventure and even a little danger.', 'Damon Salvatore', 'Elijah Gilles'), //Damon Salvatore
     new Quote(4, 'No problem can be solved from the same level of consciousness that created it.', 'Albert Einstein', 'Leonardo Di'), //Einstein
     new Quote(5, 'If you set your goals ridiculously high and it is a failure, you will fail above the success of everyone.', 'James Cameroon', 'Margot Robbie'),
     new Quote(6, 'The future belongs to those who believe in the beauty of their dreams.', 'Eleanor Roosevelt', 'Diana Michaels'), //Eleanor Roosevelt
@@ -24,6 +24,10 @@ export class QuoteComponent implements OnInit {
 
   toggleDetails(index){
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
+  }
+
+  toggleDetailsTwo(index){
+    this.quotes[index].showSubmitter = !this.quotes[index].showSubmitter;
   }
 
 
