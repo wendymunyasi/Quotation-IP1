@@ -30,6 +30,10 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showSubmitter = !this.quotes[index].showSubmitter;
   }
 
+  toggleDetailsThree(index){
+    this.quotes[index].showCreatedDate = !this.quotes[index].showCreatedDate;
+  }
+
 
   constructor() { }
 
