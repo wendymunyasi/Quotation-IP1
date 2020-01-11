@@ -9,10 +9,7 @@ import { Quote } from './quote';
 export class AppComponent {
   title = 'quotation';
 
-  quotes: Quote[] = [
-    { id: 1, name: 'You only live once' },
-    { id: 2, name: 'You cannot afford it unless you can buy it twice' },
-  ];
+
 
   constructor() {
 
