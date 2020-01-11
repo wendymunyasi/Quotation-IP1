@@ -1,11 +1,13 @@
 <div>
   <h1>My Favorite Quotes</h1>
-  <hr>
   <ul>
     <div *ngFor='let quote of quotes; let i = index'>
-      <li> {{quote.name}}</li><br>
-      <button (click)='toggleDetails(i)'>Toggle Details</button>
-      <app-quote-detail [quote]='quote'></app-quote-detail>
+    <li >
+      {{quote.name}}
+    </li>
+    <br>
+    <button (click)='toggleDetails(i)'>Toggle Author</button>
+      <app-quote-detail *ngIf='quote.showAuthor'[quote]='quote'></app-quote-detail>
     </div>
   </ul>
 </div>

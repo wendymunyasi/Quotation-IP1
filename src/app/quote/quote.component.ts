@@ -22,6 +22,10 @@ export class QuoteComponent implements OnInit {
     new Quote(11, 'Logic will get you from A to B. Imagination will take you everywhere.', 'Albert Einstein', 'Erwin Schrödinger '),
   ];
 
+  toggleDetails(index){
+    this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
+  }
+
 
   constructor() { }
 
