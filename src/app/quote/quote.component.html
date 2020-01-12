@@ -21,7 +21,7 @@
           <app-date-counter *ngIf='quote.showCreatedDate' [quote]='quote'></app-date-counter>
 
           <button (click)='toggleDetailsFour(i)' class="btn btn-danger btn-sm">Delete Quote</button>
-          <app-delete-button *ngIf='quote.showName' [quote]='quote' (isComplete)='completequote($event,i)'>
+          <app-delete-button *ngIf='quote.showName' [quote]='quote' (isComplete) = 'completeQuote($event,i)'>
           </app-delete-button>
           <hr>
         </div>
