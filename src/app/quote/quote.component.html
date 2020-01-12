@@ -10,7 +10,8 @@
             {{quote.name}} Created on {{quote.createdDate|date}}.
           </li>
           <br>
-
+          <app-upvote></app-upvote>
+          <br>
           <button (click)='toggleDetails(i)' class="btn btn-primary btn-sm">Show Author</button>
           <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote'></app-quote-detail>
 
@@ -25,7 +26,9 @@
           </app-delete-button>
           <hr>
         </div>
+        
       </ul>
+     
     </div>
     <div class="col-md-6">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
