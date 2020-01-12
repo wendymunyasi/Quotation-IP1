@@ -41,10 +41,20 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote)
   }
 
-    constructor() { }
-
-    ngOnInit() {
-    }
-
+  toggleDetailsFour(index) {
+    this.quotes[index].showName = !this.quotes[index].showName;
   }
+
+  completeQuote(isComplete, index){
+    if (isComplete) {
+      this.quotes.splice(index,1);
+    }
+  }
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
 
