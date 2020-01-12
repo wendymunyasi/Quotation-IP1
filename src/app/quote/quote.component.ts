@@ -9,7 +9,7 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[] = [
-    new Quote(1, 'You only live once.', 'Mae West', 'Sarah Matamoros', new Date(2018, 3, 14)),
+    new Quote(1, 'You only live once.', 'Mae West', 'Sarah Matamoros', new Date(1956, 3, 14)),
     new Quote(2, 'You cannot afford it unless you can buy it twice.', 'Jay Z', 'Wendy Dev', new Date(2017, 6, 9)), //Jay Z
     new Quote(3, 'You want a love that consumes you. You want passion and adventure and even a little danger.', 'Damon Salvatore', 'Elijah Gilles', new Date(2011, 8, 20)), //Damon Salvatore
     new Quote(4, 'No problem can be solved from the same level of consciousness that created it.', 'Albert Einstein', 'Leonardo Di', new Date(2016, 3, 14)), //Einstein
@@ -45,9 +45,13 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showName = !this.quotes[index].showName;
   }
 
-  completeQuote(isComplete, index){
+  completeQuote(isComplete, index) {
     if (isComplete) {
-      this.quotes.splice(index,1);
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+
+      if (toDelete) {
+        this.quotes.splice(index, 1);
+      }
     }
   }
 
