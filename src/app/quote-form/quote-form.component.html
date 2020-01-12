@@ -38,8 +38,7 @@
     <div class="form-group">
 
       <label for="createdDate">Created Date:</label>
-      <input type='date' id="created" [(ngModel)]="newQuote.createdDate" name="createdDate" #createdDate="ngModel"
-        required>
+      <input type='date' class="form-control" id="created" [(ngModel)]="newQuote.createdDate" name="createdDate" #createdDate="ngModel" required>
       <div [hidden]="createdDate.valid || createdDate.pristine" class="alert alert-danger">
         <p>Date is required</p>
       </div>
