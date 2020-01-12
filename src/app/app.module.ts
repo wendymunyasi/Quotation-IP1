@@ -14,6 +14,7 @@ import { DateCountPipe } from './date-count.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { DeleteButtonComponent } from './delete-button/delete-button.component';
 import { UpvoteComponent } from './upvote/upvote.component';
+import { DownvoteComponent } from './downvote/downvote.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { UpvoteComponent } from './upvote/upvote.component';
     QuoteFormComponent,
     DeleteButtonComponent,
     UpvoteComponent,
+    DownvoteComponent,
   ],
   imports: [
     BrowserModule,
