@@ -10,7 +10,15 @@
             {{quote.name}} Created on {{quote.createdDate|date}}.
           </li>
           <br>
-          <app-upvote></app-upvote>
+          <div class="row">
+            <div class="col-md-6">
+              <app-upvote></app-upvote>
+            </div>
+            <div class="col-md-6">
+              <app-downvote></app-downvote>
+            </div>
+          </div>
+
           <br>
           <button (click)='toggleDetails(i)' class="btn btn-primary btn-sm">Show Author</button>
           <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote'></app-quote-detail>
@@ -22,13 +30,13 @@
           <app-date-counter *ngIf='quote.showCreatedDate' [quote]='quote'></app-date-counter>
 
           <button (click)='toggleDetailsFour(i)' class="btn btn-danger btn-sm">Delete Quote</button>
-          <app-delete-button *ngIf='quote.showName' [quote]='quote' (isComplete) = 'completeQuote($event,i)'>
+          <app-delete-button *ngIf='quote.showName' [quote]='quote' (isComplete)='completeQuote($event,i)'>
           </app-delete-button>
           <hr>
         </div>
-        
+
       </ul>
-     
+
     </div>
     <div class="col-md-6">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
