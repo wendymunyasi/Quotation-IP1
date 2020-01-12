@@ -16,11 +16,13 @@
 
           <button (click)='toggleDetailsTwo(i)' class="btn btn-success btn-sm">Show Submitter</button>
           <app-quote-detailsubmitter *ngIf='quote.showSubmitter' [quote]='quote'></app-quote-detailsubmitter>
-          
+
           <button (click)='toggleDetailsThree(i)' class="btn btn-warning btn-sm">Show Time Passed</button>
           <app-date-counter *ngIf='quote.showCreatedDate' [quote]='quote'></app-date-counter>
-          
-          <app-delete-button></app-delete-button>
+
+          <button (click)='toggleDetailsFour(i)' class="btn btn-danger btn-sm">Delete Quote</button>
+          <app-delete-button *ngIf='quote.showName' [quote]='quote' (isComplete)='completequote($event,i)'>
+          </app-delete-button>
           <hr>
         </div>
       </ul>
