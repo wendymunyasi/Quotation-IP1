@@ -10,6 +10,7 @@ import { QuoteDetailsubmitterComponent } from './quote-detailsubmitter/quote-det
 import { DateCounterComponent } from './date-counter/date-counter.component';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { DeleteButtonComponent } from './delete-button/delete-button.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     DateCounterComponent,
     DateCountPipe,
     QuoteFormComponent,
+    DeleteButtonComponent,
   ],
   imports: [
     BrowserModule,
