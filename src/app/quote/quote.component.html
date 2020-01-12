@@ -10,10 +10,13 @@
             {{quote.name}} Created on {{quote.createdDate|date}}.
           </li>
           <br>
+          
           <button (click)='toggleDetails(i)' class="btn btn-primary btn-sm">Show Author</button>
           <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote'></app-quote-detail>
+
           <button (click)='toggleDetailsTwo(i)' class="btn btn-success btn-sm">Show Submitter</button>
           <app-quote-detailsubmitter *ngIf='quote.showSubmitter' [quote]='quote'></app-quote-detailsubmitter>
+          
           <button (click)='toggleDetailsThree(i)' class="btn btn-warning btn-sm">Show Time Passed</button>
           <app-date-counter *ngIf='quote.showCreatedDate' [quote]='quote'></app-date-counter>
           <hr>
