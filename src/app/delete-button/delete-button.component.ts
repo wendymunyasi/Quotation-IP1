@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Quote } from '../quote';
+
 
 @Component({
   selector: 'app-delete-button',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./delete-button.component.css']
 })
 export class DeleteButtonComponent implements OnInit {
+  @Input() quote: Quote;
+  @Output() isComplete = new EventEmitter<boolean>();
 
   constructor() { }
 
