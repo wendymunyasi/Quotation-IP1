@@ -11,6 +11,10 @@ export class DeleteButtonComponent implements OnInit {
   @Input() quote: Quote;
   @Output() isComplete = new EventEmitter<boolean>();
 
+  quoteComplete(complete: boolean) {
+    this.isComplete.emit(complete);
+  }
+
   constructor() { }
 
   ngOnInit() {
