@@ -15,6 +15,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { DeleteButtonComponent } from './delete-button/delete-button.component';
 import { UpvoteComponent } from './upvote/upvote.component';
 import { DownvoteComponent } from './downvote/downvote.component';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { DownvoteComponent } from './downvote/downvote.component';
     DeleteButtonComponent,
     UpvoteComponent,
     DownvoteComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
