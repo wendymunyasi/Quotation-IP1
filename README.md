@@ -12,7 +12,7 @@ This is a web application where the user views quotes and the user can also add 
 
 ## Setup/Installation Requirements
 Open terminal (CTRL ALT T)
-git clone https://github.com/chepkiruibetty/quotes-app
+git clone https://github.com/wendymunyasi/Quotation-IP1.git
 cd quotes-app
 use atom . or code . to open the cloned repo on Atom or Vs-code respectively
 Deployed link:
