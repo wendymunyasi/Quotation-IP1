@@ -11,7 +11,7 @@ export class DownvoteComponent implements OnInit {
   NumberOfDownvotes: number = 0;
 
   DownvoteButtonClick() {
-    this.NumberOfDownvotes--;
+    this.NumberOfDownvotes++;
   }
 
   constructor() { }
