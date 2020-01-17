@@ -1,7 +1,8 @@
 <div class="container-fluid">
   <h2 class="text-center">Create a new Quote</h2>
   <hr>
-  <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+  <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' 
+  method="POST" action="..." onsubmit="myButton.disabled = true; return true;">
     <div class="form-group">
 
       <label for="name">Quote:</label>
@@ -45,6 +46,6 @@
 
     </div>
 
-    <button type="submit" class="btn btn-success">Add Quote</button>
+    <button type="submit" class="btn btn-success" name="myButton" value="Submit" >Add Quote</button>
   </form>
 </div>
